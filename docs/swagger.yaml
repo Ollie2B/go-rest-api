@@ -1,0 +1,91 @@
+info:
+  contact: {}
+paths:
+  /ping:
+    get:
+      consumes:
+      - application/json
+      description: do ping
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: ping example
+      tags:
+      - example
+  /songs:
+    get:
+      consumes:
+      - application/json
+      description: fetch all songs data
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: find songs
+      tags:
+      - songs
+    post:
+      consumes:
+      - application/json
+      description: create song entry with name and artist
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            type: string
+      summary: create song
+      tags:
+      - songs
+  /songs/{id}:
+    delete:
+      consumes:
+      - application/json
+      description: delete song entry by id
+      produces:
+      - application/json
+      responses:
+        "204":
+          description: No Content
+          schema:
+            type: string
+      summary: delete song
+      tags:
+      - songs
+    get:
+      consumes:
+      - application/json
+      description: find song entry by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: find song
+      tags:
+      - songs
+    put:
+      consumes:
+      - application/json
+      description: update song entry by id
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+      summary: update song
+      tags:
+      - songs
+swagger: "2.0"
